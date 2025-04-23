@@ -4,9 +4,9 @@
 
 2.) https://drive.google.com/file/d/1HzBMbTq4_i9G9rLul_eOCCx9dwUgZovq/view?usp=sharing
 
-## Naming convention of dataset:
+## Naming convention of files n dataset:
 
-(a,b)_(c,d)_(r)_locationmap.png
+(a,b)\_(c,d)\_(r)\_locationmap.png
 
 (a,b) -> Center pixel coordinates of Reference Image: x, y
 
