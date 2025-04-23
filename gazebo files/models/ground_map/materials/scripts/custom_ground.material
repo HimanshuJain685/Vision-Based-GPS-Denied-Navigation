@@ -1,0 +1,14 @@
+material Gazebo/custom_map
+{
+    technique
+    {
+        pass
+        {
+            texture_unit
+            {
+                texture map2.png
+            }
+        }
+    }
+}
+
