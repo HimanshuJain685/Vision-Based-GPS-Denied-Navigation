@@ -18,11 +18,11 @@
 4. To visualize the pipeline predictions: Make pipeline.py executable (chmod +x pipeline.py), set mode to guided (mode guided), arm the drone (arm throttle), takeoff to a suitable altitude (takeoff 50) and run after reaching the altitude: python3 pipeline.py
 
 5. For vision based navigation: 
-				1. Set parameters: GPS_TYPE=14 and SIM_GPS_DISABLE 1. Adjust BLENDING_ITERATIONS in filtered_pipeline.py as required.
-				2. Make takeoff_gps_feed.py and filtered_pipeline.py executable  
-				3. Type 'module load GPSInput' and run: python3 takeoff_gps_feed.py
-				4. Set mode to guided (mode guided), arm the drone (arm throttle), takeoff to a suitable altitude (takeoff 50).
-				5. Run after reaching the altitude: python3 filtered_pipeline.py and once GPS coordinates are being predicted terminate the process takeoff_gps_feed.py.
+				- a) Set parameters: GPS_TYPE=14 and SIM_GPS_DISABLE 1. Adjust BLENDING_ITERATIONS in filtered_pipeline.py as required.
+				- b) Make takeoff_gps_feed.py and filtered_pipeline.py executable  
+				- c) Type 'module load GPSInput' and run: python3 takeoff_gps_feed.py
+				- d) Set mode to guided (mode guided), arm the drone (arm throttle), takeoff to a suitable altitude (takeoff 50).
+				- e) Run after reaching the altitude: python3 filtered_pipeline.py and once GPS coordinates are being predicted terminate the process takeoff_gps_feed.py.
 				 
 
 
