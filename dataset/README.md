@@ -8,7 +8,7 @@
 
 (a,b)\_(c,d)\_(r)\_locationmap.png
 
-(a,b) -> Center pixel coordinates of Reference Image: x, y
+(a,b) -> Center pixel coordinates of Reference Image wrt entire map file: x, y
 
 (c,d) -> Relative Center pixel coordinates of Camera Image wrt Reference Image Center: x, y
 
