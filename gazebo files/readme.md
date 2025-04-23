@@ -1,2 +1,2 @@
 # Instructions:
-- Please ensure that the folders are organized as shown here in your directories to ensure the code loads correctly. This includes the models provided in the model directory, as well as the world files and launch file.
+- Please ensure that the folders are organized as shown here in your local path directories to ensure the code loads correctly. This includes the models provided in the model directory, as well as the world files and launch file.
