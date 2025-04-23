@@ -1,4 +1,4 @@
-Georeferenced Raster image- Mumbai 7500.tif [link for access: ]
+Georeferenced Raster image- Mumbai 7500.tif [https://drive.google.com/file/d/1XWH18RVO8AXFv1XUFBlcc0Y97nSwY1Gd/view?usp=drive_link]
 Locations file for Ardupilot SITL- locations.txt 
 Code to visualize predictions given by pipeline: pipeline.py
 Code to feed a constant GPS coordinate to SITL: takeoff_gps_feed.py
