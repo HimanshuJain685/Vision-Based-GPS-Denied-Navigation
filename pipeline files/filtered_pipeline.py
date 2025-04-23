@@ -131,12 +131,11 @@ def arm_and_takeoff(target_altitude):
 # Class for low-pass filter
 # to smooth out the GPS data
 class LowPassFilter:
-    def __init__(self, alpha, initial_value):
-        self.alpha = alpha
+    def __init__(self, initial_value):
         self.filtered = initial_value
 
-    def update(self, new_value):
-        self.filtered = self.alpha * new_value + (1 - self.alpha) * self.filtered
+    def update(self, new_value, alpha):
+        self.filtered = alpha * new_value + (1 - alpha) * self.filtered
         return self.filtered
 
 # Camera class to handle image capture
@@ -193,9 +192,11 @@ def main():
         h_acc = 0.5 * ((width_m / width) + (height_m / height))
 
         # Initialize Filters
-        lat_filter = LowPassFilter(alpha=0.2, initial_value=INITIAL_GPS[0])
-        lon_filter = LowPassFilter(alpha=0.2, initial_value=INITIAL_GPS[1])
-        yaw_filter = LowPassFilter(alpha=0.2, initial_value=0.0)
+        lat_filter = LowPassFilter(initial_value=INITIAL_GPS[0])
+        lon_filter = LowPassFilter(initial_value=INITIAL_GPS[1])
+        yaw_filter = LowPassFilter(initial_value=0.0)
+
+        BLEND_ITERATIONS = 75  # Number of iterations over which to increase alpha
 
         count = 0
         iteration = 0
@@ -308,22 +309,23 @@ def main():
                 angle_rad = np.arctan2(deltaX, deltaY)
                 angle_deg = 360 - np.mod(np.degrees(angle_rad), 360)
 
-                # Filter outputs
-                filtered_lat = lat_filter.update(lat)
-                filtered_lon = lon_filter.update(lon)
-                filtered_yaw = yaw_filter.update(angle_deg)
+                # Compute current alpha based on iteration
+                alpha = min(0.9, 0.9 * iteration / BLEND_ITERATIONS)
 
-                print("Latitude:", filtered_lat, "Longitude:", filtered_lon, "Yaw:", filtered_yaw)
+                # Filter outputs using dynamic alpha
+                filtered_lat = lat_filter.update(lat, alpha)
+                filtered_lon = lon_filter.update(lon, alpha)
+                filtered_yaw = yaw_filter.update(angle_deg, alpha)
+
+                print("Latitude:", filtered_lat, "Longitude:", filtered_lon, "Alpha:", alpha)
                 send_gps_udp(filtered_lat, filtered_lon, filtered_yaw)
 
                 frequency = 1 / (time.time() - start_time)
                 print("Frequency:", frequency)
                 iteration += 1
 
-                
             else:
                 print("Unable to get enough features.")
-
 
 #------------------------------------------------------------------------------------------------------#
 if __name__ == "__main__":
