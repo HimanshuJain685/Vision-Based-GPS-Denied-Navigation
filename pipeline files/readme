@@ -3,6 +3,7 @@ Locations file for Ardupilot SITL- locations.txt
 Code to visualize predictions given by pipeline: pipeline.py
 Code to feed a constant GPS coordinate to SITL: takeoff_gps_feed.py
 Code to use for Vision based navigation: filtered_pipeline.py
+Code to check dimensions and Center GPS coordinate of given GeoTiff Image: dimensions.py
 
 Instructions:
 0. Make sure the camera topic and the path to Georeferenced path and the UDP address for GPS feed given in pipeline scripts are correct.
