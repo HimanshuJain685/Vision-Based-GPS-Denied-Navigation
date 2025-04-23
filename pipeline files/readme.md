@@ -7,7 +7,7 @@
 - Code to check dimensions and Center GPS coordinate of given GeoTiff Image: dimensions.py
 
 # Instructions:
-0. Make sure the camera topic and the path to Georeferenced path and the UDP address for GPS feed given in pipeline scripts are correct.
+0. Make sure the camera topic and the path to Georeferenced map and the UDP address for GPS feed given in pipeline scripts are correct.
  
 1. Get the Georeferenced raster map image from the link.
 
