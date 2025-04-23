@@ -1,8 +1,8 @@
 ## Links to the synthesised dataset used for training and testing models:
 
-1.) https://drive.google.com/file/d/1xTRD12ybKQaEmozn-2HzhUjsdc0L7I-D/view?usp=sharing contains the pair dataset from same satelite
+1.) https://drive.google.com/file/d/1xTRD12ybKQaEmozn-2HzhUjsdc0L7I-D/view?usp=sharing contains the pair dataset from same satelite (google only)
 
-2.) https://drive.google.com/file/d/1HzBMbTq4_i9G9rLul_eOCCx9dwUgZovq/view?usp=sharing contains the pair dataset from different satelite
+2.) https://drive.google.com/file/d/1HzBMbTq4_i9G9rLul_eOCCx9dwUgZovq/view?usp=sharing contains the pair dataset from different satelite (google and bing)
 
 ## Naming convention of files in dataset:
 
