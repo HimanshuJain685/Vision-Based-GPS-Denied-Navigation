@@ -1,0 +1,31 @@
+<sdf version="1.6">
+  <model name="ground_map">
+    <static>true</static>
+    <link name="ground_link">
+      <collision name="collision">
+        <geometry>
+          <plane>
+            <normal>0 0 1</normal>
+            <size>3868.73 2675.51</size> <!-- width (x) and height (y) -->
+          </plane>
+        </geometry>
+      </collision>
+      <visual name="visual">
+        <geometry>
+          <plane>
+            <normal>0 0 1</normal>
+            <size>1934.19 1459.27</size>
+          </plane>
+        </geometry>
+        <material>
+          <script>
+            <uri>model://ground_map/materials/scripts</uri>
+            <uri>model://ground_map/materials/textures</uri>
+            <name>Gazebo/custom_map</name>
+          </script>
+        </material>
+      </visual>
+    </link>
+  </model>
+</sdf>
+
