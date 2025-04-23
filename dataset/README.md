@@ -1,4 +1,4 @@
-## Links to the dataset which we created and used for training and testing models:
+## Links to the synthesised dataset used for training and testing models:
 
 1.) https://drive.google.com/file/d/1xTRD12ybKQaEmozn-2HzhUjsdc0L7I-D/view?usp=sharing
 
