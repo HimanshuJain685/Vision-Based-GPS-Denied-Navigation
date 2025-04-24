@@ -131,8 +131,8 @@ def generate_image_pairs(tif_path1, tif_path2, location, ref_dir, cam_dir, n, re
 
 #-----------------------------------------------------------------------------------#
 # Output directories
-ref_dir = "us_different_dataset/reference image"
-cam_dir = "us_different_dataset/camera image"
+ref_dir = "dataset/Reference Image"
+cam_dir = "dataset/Camera Image"
 
 generate_image_pairs("US Google.tif", "US Bing.tif", "us", ref_dir, cam_dir, n=500, ref_size=1000)
 
