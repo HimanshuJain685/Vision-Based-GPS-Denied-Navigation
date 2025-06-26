@@ -5,7 +5,7 @@
 - "cv_models" -> jupyter notebooks for all models. Cell outputs within the notebooks contain visualization of matches and performance metrics.
 - "dataset" -> Images used to train and test the cv models. Folder contains some sample images. Entire dataset may be accessed from the drive links in the read me file.
 - "gazebo files" -> Files and plugins used for the gazebo simulation.
-- "pipeline files" -> Code used to execute image localization models in conjunction with the gazebo simulation.
+- "pipeline files" -> Code used to execute the image localization models in conjunction with the gazebo simulation.
  
 
 ## Instructions: 
@@ -16,7 +16,7 @@
 
 3. Sample dataset and codes for generating Reference Image and Simulated Camera Image pairs from Raster map images are provided in 'dataset' folder.
 
-4. The models, world file and launch file required for Gazebo simulation are provided in 'gazebo files' folder.
+4. The models, world file and launch file required for Gazebo simulation are provided in 'gazebo files' folder. 
 
 5. 'pipeline files' folder contains the main pipeline for Image Matching and Visual Navigation in UAVs (in Gazebo + Ardupilot SITL) and the instructions to run the scripts.
 
